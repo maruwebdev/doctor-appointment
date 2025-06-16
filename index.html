@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Book Doctor Appointment Online</title>
+    <meta name="description"
+        content="Book appointments with top doctors instantly. Verified specialists, 24x7 booking, affordable care. Trusted by thousands.">
+    <link rel="icon" type="image/svg+xml" href="assets/medicare-logo.svg">
+    <link rel="apple-touch-icon" href="assets/medicare-logo.svg">
+    <link rel="shortcut icon" href="assets/medicare-logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">MediCare</div>
+            <nav>
+                <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#specialists">Doctors</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#appointment">Book Appointment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#appointment" class="cta-btn">Book Now</a>
+        </div>
+        <div class="mobile-nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>Expert Healthcare, Anytime</h1>
+                <p>Book appointments with trusted doctors instantly. Your health, our priority.</p>
+                <a href="#appointment" class="hero-btn">Book Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images.png" alt="Doctors at hospital">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="services">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="why-cards">
+                <div class="why-card">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Verified Doctors</h3>
+                    <p>All our doctors are certified and background-checked for your safety.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>24x7 Booking</h3>
+                    <p>Book appointments anytime, anywhere, with instant confirmation.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h3>Affordable Care</h3>
+                    <p>Transparent pricing and affordable consultations for everyone.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-hospital"></i>
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art clinics and hospitals for the best care experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Specialists Section -->
+    <section class="specialists" id="specialists">
+        <div class="container">
+            <h2>Top Specialists</h2>
+            <div class="specialist-cards">
+                <div class="specialist-card">
+                    <img src="assets/Dr. Emily Carter.png" alt="Dr. Emily Carter">
+                    <h3>Dr. Emily Carter</h3>
+                    <p>Neurologist</p>
+                    <a href="#" class="profile-btn">View Profile</a>
+                </div>
+                <div class="specialist-card">
+                    <img src="assets/Dr. Olivia Bennett.png" alt="Dr. Olivia Bennett">
+                    <h3>Dr. Olivia Bennett</h3>
+                    <p>Oncologist</p>
+                    <a href="#" class="profile-btn">View Profile</a>
+                </div>
+                <div class="specialist-card">
+                    <img src="assets/Dr. Ethan Walker.png" alt="Dr. Ethan Walker">
+                    <h3>Dr. Ethan Walker</h3>
+                    <p>Cardiologist</p>
+                    <a href="#" class="profile-btn">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form Section -->
+    <section class="appointment-form-section" id="appointment">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <form class="appointment-form" action="#" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone Number" required />
+                    <select name="doctor" required>
+                        <option value="">Select Doctor</option>
+                        <option>Dr. Emily Carter</option>
+                        <option>Dr. Olivia Bennett</option>
+                        <option>Dr. Ethan Walker</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="date" name="date" required />
+                    <input type="time" name="time" required />
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>“Booking was super easy and the doctor was very professional. Highly recommend!”</p>
+                    <div class="testimonial-user">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 1">
+                        <span>Priya Sharma</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>“I got an appointment within minutes. The process is smooth and the staff is friendly.”</p>
+                    <div class="testimonial-user">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2">
+                        <span>Rahul Mehta</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>“The best platform for finding trusted doctors. I felt safe and cared for.”</p>
+                    <div class="testimonial-user">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Patient 3">
+                        <span>Neha Verma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-logo">MediCare</div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#specialists">Doctors</a>
+                <a href="#services">Services</a>
+                <a href="#appointment">Book Appointment</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/shubhanshu-maru-29b661198" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/maruwebdev" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/devbyshubh" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MediCare. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

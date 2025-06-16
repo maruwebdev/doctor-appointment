@@ -1,0 +1,594 @@
+/*
+  Modern Healthcare Appointment Website CSS
+  Inspired by Practo, Nivaan Care, and 2025 UI trends
+  Author: Copilot
+*/
+
+:root {
+  --primary: #3bb2d6;
+  --primary-dark: #217ca3;
+  --secondary: #4F9D71;
+  --bg: #f8fcfd;
+  --white: #fff;
+  --text: #222;
+  --muted: #6c757d;
+  --accent: #eaf6fa;
+  --border: #e0e7ef;
+  --shadow: 0 4px 24px 0 rgba(60, 120, 180, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.3s;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-links li a:hover {
+  color: var(--primary-dark);
+}
+.cta-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.7rem 1.6rem;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(59,178,214,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--white) 100%);
+  padding: 4rem 0 2.5rem 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s;
+}
+.hero-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.hero-text {
+  flex: 1 1 340px;
+}
+.hero-text h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.hero-btn {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.8rem 2.2rem;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(79,157,113,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+.hero-image {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  max-width: 340px;
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(60, 120, 180, 0.10);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  background: var(--white);
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+}
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.why-card {
+  background: var(--accent);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  flex: 1 1 220px;
+  max-width: 260px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.why-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(59,178,214,0.13);
+}
+.why-card i {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.why-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+.why-card p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Top Specialists */
+.specialists {
+  background: var(--bg);
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+}
+.specialists h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+.specialist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.specialist-card {
+  background: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  flex: 1 1 260px;
+  max-width: 300px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.specialist-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(59,178,214,0.13);
+}
+.specialist-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(60, 120, 180, 0.10);
+}
+.specialist-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-dark);
+}
+.specialist-card p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.profile-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 1.3rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.profile-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Appointment Form */
+.appointment-form-section {
+  background: var(--white);
+  padding: 3.5rem 0 2.5rem 0;
+}
+.appointment-form-section h2 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+.appointment-form {
+  background: var(--accent);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeInUp 1s;
+}
+.form-row {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.appointment-form input,
+.appointment-form select {
+  flex: 1 1 180px;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.appointment-form input:focus,
+.appointment-form select:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px rgba(59,178,214,0.08);
+}
+.submit-btn {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.9rem 2.2rem;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s, transform 0.2s;
+}
+.submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--bg);
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  flex: 1 1 260px;
+  max-width: 320px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(59,178,214,0.13);
+}
+.testimonial-card p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.testimonial-user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+.testimonial-user span {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Footer */
+footer {
+  background: var(--white);
+  box-shadow: 0 -2px 12px 0 rgba(60, 120, 180, 0.04);
+  padding: 2.5rem 0 0.5rem 0;
+  margin-top: 2rem;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--primary-dark);
+}
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+}
+.footer-social a {
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: color 0.2s, transform 0.2s;
+}
+.footer-social a:hover {
+  color: var(--primary-dark);
+  transform: scale(1.15);
+}
+.footer-bottom {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin-top: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 200;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--primary);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Hide nav-links on mobile by default */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 70vw;
+    max-width: 320px;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
+    box-shadow: -2px 0 16px 0 rgba(60, 120, 180, 0.08);
+    transition: right 0.3s;
+    z-index: 150;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .cta-btn {
+    display: none;
+  }
+}
+
+/* Overlay for mobile nav */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  z-index: 120;
+}
+.mobile-nav-overlay.active {
+  display: block;
+}
+
+/* Responsive adjustments for all sections */
+@media (max-width: 900px) {
+  .hero-flex, .specialist-cards, .why-cards, .testimonial-cards, .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
+  .hero-image img {
+    max-width: 90vw;
+    min-width: 70vw;
+  }
+}
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  .container { width: 70%; }
+  .hero {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .specialist-card, .testimonial-card, .why-card {
+    padding: 1.2rem 0.7rem;
+    min-width: 70vw;
+    max-width: 98vw;
+  }
+  .appointment-form {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .appointment-form .form-row > * {
+    height: 58px;
+    min-height: 58px;
+    max-height: 58px;
+    box-sizing: border-box;
+  }
+
+    
+  }
+  .footer-flex {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+
+/* Prevent overflow and ensure scaling */
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Appointment form fields and buttons scaling */
+.appointment-form input,
+.appointment-form select {
+  width: 100%;
+  min-width: 0;
+  font-size: 1rem;
+}
+.submit-btn {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.9rem 0;
+}
