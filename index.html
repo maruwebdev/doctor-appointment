@@ -33,7 +33,7 @@
                     <li><a href="#specialists">Doctors</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#appointment">Book Appointment</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#footer-social" id="contact-link">Contact</a></li>
                 </ul>
             </nav>
             <a href="#appointment" class="cta-btn">Book Now</a>
@@ -130,8 +130,8 @@
                     </select>
                 </div>
                 <div class="form-row">
-                    <input type="date" name="date" required />
-                    <input type="time" name="time" required />
+                    <input type="date" name="date" placeholder="date" required />
+                    <input type="time" name="time" placeholder="time" required />
                 </div>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
@@ -177,9 +177,9 @@
                 <a href="#specialists">Doctors</a>
                 <a href="#services">Services</a>
                 <a href="#appointment">Book Appointment</a>
-                <a href="#contact">Contact</a>
+                <a href="#footer-social" id="footer-contact-link">Contact</a>
             </div>
-            <div class="footer-social">
+            <div class="footer-social" id="footer-social">
                 <a href="https://www.linkedin.com/in/shubhanshu-maru-29b661198" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/maruwebdev" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
                 <a href="https://instagram.com/devbyshubh" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
@@ -190,6 +190,19 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Smooth scroll to footer social links when Contact is clicked
+        const contactLinks = document.querySelectorAll('a[href="#footer-social"]');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const social = document.getElementById('footer-social');
+                if (social) {
+                    social.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
