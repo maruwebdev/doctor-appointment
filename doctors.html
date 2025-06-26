@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors | MediCare</title>
+    <link rel="icon" type="image/svg+xml" href="assets/medicare-logo.svg">
+    <link rel="apple-touch-icon" href="assets/medicare-logo.svg">
+    <link rel="shortcut icon" href="assets/medicare-logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">MediCare</div>
+            <nav>
+                <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#top-specialists">Top Specialists</a></li>
+                    <li><a href="#other-doctors">Other Doctors</a></li>
+                    <li><a href="#footer-social" id="contact-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#appointment" class="cta-btn">Book Now</a>
+        </div>
+        <div class="mobile-nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- Tagline -->
+    <section class="tagline-section">
+        <h1 class="tagline">Our Life Saviours</h1>
+    </section>
+
+    <!-- Top Specialists Section -->
+    <section id="top-specialists" class="specialists-section">
+        <div class="container">
+            <h2>Top Specialists</h2>
+            <div class="specialists-grid">
+                <div class="doctor-card" id="emily-carter">
+                    <img src="assets/Dr. Emily Carter.png" alt="Dr. Emily Carter smiling in clinic">
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Carter</h3>
+                        <p class="specialty">Cardiologist, Chief Consultant</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MD (Cardiology), Harvard Medical School</li>
+                            <li><strong>Experience:</strong> 18 years</li>
+                            <li><strong>Places Served:</strong> Mayo Clinic, Cleveland Clinic</li>
+                            <li><strong>Perks:</strong> "Best Doctor" Award 2022, AHA Fellow</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doctor-card" id="ethan-walker">
+                    <img src="assets/Dr. Ethan Walker.png" alt="Dr. Ethan Walker in hospital coat">
+                    <div class="doctor-info">
+                        <h3>Dr. Ethan Walker</h3>
+                        <p class="specialty">Neurologist, Senior Specialist</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> DM (Neurology), Johns Hopkins University</li>
+                            <li><strong>Experience:</strong> 15 years</li>
+                            <li><strong>Places Served:</strong> Mount Sinai, UCSF Medical Center</li>
+                            <li><strong>Perks:</strong> "Neuro Star" Award, Published Author</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doctor-card" id="olivia-bennett">
+                    <img src="assets/Dr. Olivia Bennett.png" alt="Dr. Olivia Bennett with stethoscope">
+                    <div class="doctor-info">
+                        <h3>Dr. Olivia Bennett</h3>
+                        <p class="specialty">Oncologist, Lead Consultant</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MD (Oncology), Stanford University</li>
+                            <li><strong>Experience:</strong> 12 years</li>
+                            <li><strong>Places Served:</strong> Dana-Farber, Memorial Sloan Kettering</li>
+                            <li><strong>Perks:</strong> "Oncology Excellence" Award, TEDx Speaker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Doctors Section -->
+    <section id="other-doctors" class="other-doctors-section">
+        <div class="container">
+            <h2>Other Doctors</h2>
+            <div class="other-doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-img-placeholder"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="doctor-info">
+                        <h3>Dr. Priya Sharma</h3>
+                        <p class="specialty">Pediatrician</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MBBS, AIIMS Delhi</li>
+                            <li><strong>Experience:</strong> 7 years</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-img-placeholder"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Lee</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MS (Ortho), University of Michigan</li>
+                            <li><strong>Experience:</strong> 9 years</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-img-placeholder"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sara Kim</h3>
+                        <p class="specialty">Dermatologist</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MD, Seoul National University</li>
+                            <li><strong>Experience:</strong> 5 years</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-img-placeholder"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="doctor-info">
+                        <h3>Dr. Anil Gupta</h3>
+                        <p class="specialty">General Physician</p>
+                        <ul class="doctor-details">
+                            <li><strong>Qualifications:</strong> MBBS, Grant Medical College</li>
+                            <li><strong>Experience:</strong> 6 years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-logo">MediCare</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#top-specialists">Top Specialists</a>
+                <a href="#other-doctors">Other Doctors</a>
+                <a href="#footer-social" id="footer-contact-link">Contact</a>
+            </div>
+            <div class="footer-social" id="footer-social">
+                <a href="https://www.linkedin.com/in/shubhanshu-maru-29b661198" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/maruwebdev" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/devbyshubh" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MediCare. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Smooth scroll to footer social links when Contact is clicked
+        const contactLinks = document.querySelectorAll('a[href="#footer-social"]');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const social = document.getElementById('footer-social');
+                if (social) {
+                    social.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
