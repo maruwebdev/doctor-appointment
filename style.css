@@ -237,7 +237,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.why-card a {
+.why-card a, h3  {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: var(--primary-dark);
