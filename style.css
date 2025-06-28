@@ -36,6 +36,12 @@ body {
   margin: 0 auto;
 }
 
+/* Remove tap highlight color on doctor cards and similar interactive elements */
+.doctor-card, .specialist-card, .why-card, .profile-btn, .cta-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
 /* Navbar */
 .navbar {
   background: var(--white);
@@ -572,7 +578,7 @@ footer {
     top: 0;
     right: -100vw;
     height: 40vh;
-    width: 70vw;
+    width: 45vw;
     max-width: 320px;
     background: var(--white);
     flex-direction: column;
